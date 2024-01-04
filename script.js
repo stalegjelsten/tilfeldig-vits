@@ -132,9 +132,9 @@ const randJoke = () => {
   let blockquote = document.getElementById("joke");
   blockquote.innerHTML = joke.vits;
   if (joke.svar?.length > 0) {
-    document.getElementById("showAnswerBtn").style.display = "inline-block";
+    document.getElementById("answerBtn").style.display = "inline-block";
   } else {
-    document.getElementById("showAnswerBtn").style.display = "none";
+    document.getElementById("answerBtn").style.display = "none";
   }
 };
 
