@@ -139,8 +139,14 @@ const randJoke = () => {
 };
 
 const visSvar = () => {
-  showAnswer = true;
-  document.getElementById("svar").innerHTML = svar;
+  showAnswer = !showAnswer;
+  if (showAnswer) {
+    document.getElementById("svar").innerHTML = svar;
+    document.getElementById("answerBtn").innerHTML = "Skjul svar";
+  } else {
+    document.getElementById("svar").innerHTML = "";
+    document.getElementById("answerBtn").innerHTML = "Vis svar";
+  }
 };
 
 randJoke();
