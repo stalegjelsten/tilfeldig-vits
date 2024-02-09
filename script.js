@@ -4,7 +4,12 @@ let svar = "";
 
 let jokes = []
 const loadJSON = () => {
-    fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json').then((response) => response.json()).then((data) => (jokes = data))
+    fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json')
+        .then((response) => response.json())
+        .then((data) => {
+            jokes = data;
+            return data
+        })
 }
 
 const randJoke = () => {
