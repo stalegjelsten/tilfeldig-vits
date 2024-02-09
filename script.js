@@ -9,7 +9,7 @@ const loadJSON = () => {
         .catch((error) => console.log('Error', error))
         .then((data) => {
             jokes = data;
-            return data
+            return data;
         })
 }
 
@@ -17,7 +17,7 @@ const randJoke = () => {
     document.getElementById("svar").innerHTML = "";
     showAnswer = false;
     const rand = Math.floor(Math.random() * jokes.length);
-    const joke = jokes[rand];
+    const joke = loadJSON().then((jokes) => jokes[rand]);
     svar = joke.svar;
     let blockquote = document.getElementById("joke");
     blockquote.innerHTML = joke.vits;
