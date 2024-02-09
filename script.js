@@ -2,7 +2,7 @@ let showAnswer = false;
 let showAnswerButton = false;
 let svar = "";
 
-let jokes = fetch('./jokes.json').then((response) => response.json()).then((data) => data)
+let jokes = fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json').then((response) => response.json()).then((data) => data)
 
 const randJoke = () => {
   document.getElementById("svar").innerHTML = "";
