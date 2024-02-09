@@ -3,21 +3,12 @@ let showAnswerButton = false;
 let svar = "";
 
 let jokes = []
-const loadJSON = () => {
-    fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json')
-        .then((response) => response.json())
-        .catch((error) => console.log('Error', error))
-        .then((data) => {
-            jokes = data;
-            return data;
-        })
-}
 
 const randJoke = () => {
     document.getElementById("svar").innerHTML = "";
     showAnswer = false;
     const rand = Math.floor(Math.random() * jokes.length);
-    const joke = loadJSON().then((jokes) => jokes[rand]);
+    const joke = jokes[rand];
     svar = joke.svar;
     let blockquote = document.getElementById("joke");
     blockquote.innerHTML = joke.vits;
@@ -28,6 +19,16 @@ const randJoke = () => {
     }
     document.getElementById("answerBtn").innerHTML = "Vis svar";
 };
+
+const loadJSON = () => {
+    fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json')
+        .then((response) => response.json())
+        .catch((error) => console.log('Error', error))
+        .then((data) => {
+            jokes = data;
+            randJoke()
+        })
+}
 
 const visSvar = () => {
     showAnswer = !showAnswer;
@@ -40,4 +41,4 @@ const visSvar = () => {
     }
 };
 
-loadJSON().then(() => randJoke())
+loadJSON()
