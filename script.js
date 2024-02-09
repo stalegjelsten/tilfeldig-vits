@@ -136,6 +136,7 @@ const randJoke = () => {
   } else {
     document.getElementById("answerBtn").style.display = "none";
   }
+  document.getElementById("answerBtn").innerHTML = "Vis svar";
 };
 
 const visSvar = () => {
