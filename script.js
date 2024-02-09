@@ -3,7 +3,9 @@ let showAnswerButton = false;
 let svar = "";
 
 let jokes = []
-fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json').then((response) => response.json()).then((data) => (jokes = data))
+const loadJSON = () => {
+    fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json').then((response) => response.json()).then((data) => (jokes = data))
+}
 
 const randJoke = () => {
     document.getElementById("svar").innerHTML = "";
@@ -32,4 +34,4 @@ const visSvar = () => {
     }
 };
 
-randJoke();
+loadJSON().then(() => randJoke())
