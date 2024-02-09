@@ -6,6 +6,7 @@ let jokes = []
 const loadJSON = () => {
     fetch('https://stalegjelsten.github.io/tilfeldig-vits/jokes.json')
         .then((response) => response.json())
+        .catch((error) => console.log('Error', error))
         .then((data) => {
             jokes = data;
             return data
