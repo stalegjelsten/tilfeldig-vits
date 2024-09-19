@@ -121,12 +121,12 @@
     },
     {
         "vits": "Og hvorfor dro kua til terapi? ",
-        "svar": "Den måtte <b>ku</b>reres.",
+        "svar": "Den måtte <span style='font-weight:900;'>ku</span>reres.",
         "kilde": "Ane"
     },
     {
         "vits": "Og hvorfor dro kua til terapi? ",
-        "svar": "Den hadde <b>mø</b>rke tanker.",
+        "svar": "Den hadde <span style='font-weight:900;'>mø</span>rke tanker.",
         "kilde": "Jenny"
     },
     {
