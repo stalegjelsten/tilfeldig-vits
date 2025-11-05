@@ -143,5 +143,10 @@
         "vits": "Hva er det kineseren som alltid kommer på tiden?",
         "svar": "Tai Ming",
         "kilde": "Adrian"
+    },
+        {
+        "vits": "Hva er zoombiers favorittmat?",
+        "svar": "Fingermat",
+        "kilde": ""
     }
 ]
